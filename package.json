@@ -1,13 +1,17 @@
 {
   "name": "broccoli-spritesmith",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Broccoli sass/scss spritesmith plugins",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "hysios@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hysios/broccoli-spritesmith.git"
+  },  
+  "license": "MIT",
   "devDependencies": {
     "broccoli-replace": "^0.1.7",
     "broccoli-writer": "^0.1.1",
