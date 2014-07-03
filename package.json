@@ -12,7 +12,7 @@
     "url": "https://github.com/hysios/broccoli-spritesmith.git"
   },  
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "broccoli-replace": "^0.1.7",
     "broccoli-writer": "^0.1.1",
     "spritesmith": "^0.19.2"
