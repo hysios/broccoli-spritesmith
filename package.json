@@ -1,0 +1,16 @@
+{
+  "name": "broccoli-spritesmith",
+  "version": "0.0.0",
+  "description": "Broccoli sass/scss spritesmith plugins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "broccoli-replace": "^0.1.7",
+    "broccoli-writer": "^0.1.1",
+    "spritesmith": "^0.19.2"
+  }
+}
