@@ -5,7 +5,7 @@ var Writer = require('broccoli-writer'),
 module.exports = BroccoliSpritesmith;
 BroccoliSpritesmith.prototype = Object.create(Writer.prototype);
 BroccoliSpritesmith.prototype.constructor = BroccoliSpritesmith;
-function BroccoliSpritesmith (arg1, arg2, ...) {
+function BroccoliSpritesmith (inputTree, options) {
   if (!(this instanceof BroccoliSpritesmith)) return new BroccoliSpritesmith(inputTree, options);
   options = options || {};
 
