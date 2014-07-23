@@ -1,6 +1,8 @@
 var Writer = require('broccoli-writer'),
-	replace = require('broccoli-replace'),
-	Spritesmith = require('spritesmith');
+  replace = require('broccoli-replace'),
+  defaults = require('lodash-node/modern/objects/defaults'),
+  path = require('path'),
+  Spritesmith = require('spritesmith');
 
 module.exports = BroccoliSpritesmith;
 BroccoliSpritesmith.prototype = Object.create(Writer.prototype);

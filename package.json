@@ -1,6 +1,6 @@
 {
   "name": "broccoli-spritesmith",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Broccoli sass/scss spritesmith plugins",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hysios/broccoli-spritesmith.git"
-  },  
+  },
   "license": "MIT",
   "dependencies": {
     "broccoli-replace": "^0.1.7",
     "broccoli-writer": "^0.1.1",
+    "lodash-node": "^2.4.1",
     "spritesmith": "^0.19.2"
   }
 }
