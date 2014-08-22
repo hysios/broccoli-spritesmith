@@ -16,6 +16,9 @@
     "broccoli-replace": "^0.1.7",
     "broccoli-writer": "^0.1.1",
     "lodash-node": "^2.4.1",
-    "spritesmith": "^0.19.2"
+    "mkdirp": "^0.5.0",
+    "rsvp": "^3.0.9",
+    "spritesmith": "^0.19.2",
+    "walk-sync": "^0.1.2"
   }
 }
