@@ -18,8 +18,8 @@ function BroccoliSpritesmith (inputTree, options) {
     spriteName: 'sprites_background',
     ext: 'png',
     engine: 'auto',
-    algorithm: 'top-down',
-    padding: 0
+    algorithm: 'binary-tree',
+    padding: 5
   });
 
   this.inputTree = inputTree;
@@ -40,7 +40,9 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
   var spritesOutputFile = path.join(destDir, spritesPath, spriteName + '.' + ext);
 
   var runOptions = {
-    src: spritesImages
+    src: spritesImages,
+    padding: this.options.padding,
+    algorithm: this.options.algorithm    
   };
 
   return new Promise(function(resolve, reject){
