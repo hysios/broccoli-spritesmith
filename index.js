@@ -21,7 +21,6 @@ function BroccoliSpritesmith (inputTree, options) {
     output: 'all',
     outputPath: 'assets',
     spriteName: 'sprites',
-    spritesPath: 'test/images',
     ext: 'png',
 
     // sprite engine arguments   
