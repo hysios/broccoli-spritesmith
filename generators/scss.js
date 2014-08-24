@@ -56,8 +56,7 @@ SCSSGenerator.prototype.generateSCSSFile = function(config) {
   var context = '';
   for (var key in list) {
     var rule = list[key];
-    var name = path.basename(key, '.' + this.ext);
-
+    var name = path.basename(key, '.png');
     rule['name'] = name;
     rule['offsetX'] = rule.x > 0 ? -rule.x : 0;
     rule['offsetY'] = rule.y > 0 ? -rule.y : 0;
