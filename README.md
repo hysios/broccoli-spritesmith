@@ -38,7 +38,7 @@ Example `options` object:
 
 `output` defaults is 'all', can be set `'scss'`, `'image'`, '`less`', but now only support `'scss'` , `'image'`
 
-`engine`, `algorithm`, `padding` is spritesmit options
+`engine`, `algorithm`, `padding` is spritesmit [options](https://github.com/Ensighten/spritesmith#documentation)
 
 License
 
