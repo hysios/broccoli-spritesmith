@@ -17,6 +17,7 @@ function SCSSGenerator (options) {
 
 	options = assign({}, options, {
 		outputPath: 'app/styles', 
+        spritesPath: 'assets',
 		name: 'sprites',
 		ext: '.scss'
 	})
@@ -27,6 +28,7 @@ function SCSSGenerator (options) {
 	}
 
 	this.relativePath = options.outputPath;
+    this.spritesPath = options.spritesPath;
 	this.outputPath = path.join(options.destDir, options.outputPath);
 	this.outputFile = path.join(this.outputPath, options.name + options.ext);
 	this.ext = options.ext;
@@ -62,7 +64,7 @@ SCSSGenerator.prototype.generateSCSSFile = function(config) {
     rule['offsetY'] = rule.y > 0 ? -rule.y : 0;
     rule['totalWidth'] = config.properties.width;
     rule['totalHeight'] = config.properties.height;
-    rule['imagePath'] = path.join('../', this.relativePath, this.spriteName + this.ext);
+    rule['imagePath'] = path.join('../', this.spritesPath, this.spriteName + '.png');
 
     context += this.generateSCSS(rule);
   }
