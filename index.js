@@ -48,7 +48,9 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
     return null;
   }
 
-  var spritesImages = walkSync(spriteImagePath).map(function(file){
+  var spritesImages = walkSync(spriteImagePath).filter(function(path) {
+    return path.lastIndexOf(ext) === path.length - ext.length;
+  }).map(function(file){
     self.log("\tdetecting:", file);
     return path.join(spriteImagePath, file);
   });
