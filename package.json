@@ -8,11 +8,7 @@
   },
   "author": "Hysios Hu <hysios@gmail.com>",
   "contributors": [
-    {
-      "name" : "Ming Liu"
-    , "email" : "vmliu1@gmail.com"
-    , "url" : "http://www.codingupfengshui.io/"
-    }
+    "Ming Liu <vmliu1@gmail.com>"
   ],
   "repository": {
     "type": "git",
