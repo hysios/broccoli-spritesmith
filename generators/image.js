@@ -13,11 +13,11 @@ function ImageGenerator (options) {
 		options = {}
 	}
 
-	options = assign({}, options, {
+	options = assign({}, {
 		outputPath: 'assets', 
 		name: 'sprites',
 		ext: '.png'
-	})
+	}, options)
 
 	if (!options.destDir) {
 		throw new Error('must have destDir argument in options');

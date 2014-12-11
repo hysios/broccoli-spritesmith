@@ -39,6 +39,7 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
   var self = this;
   var ext = this.options.ext || '.png';
   var outputPath = this.options.outputPath;
+  var spriteName = this.options.spriteName;
   var spriteImagePath = path.join(process.cwd(), this.inputTree);
 
 
@@ -75,8 +76,8 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
 
         var generators = self.loadGenerators({
           destDir: destDir,
-          outputPath: outputPath, 
-
+          outputPath: outputPath,
+          name: spriteName
         });
 
         self.log('load', generators.length, 'generator success!');
@@ -111,7 +112,6 @@ BroccoliSpritesmith.prototype.loadGenerators = function(options) {
   }
 
   this.log('loadGenerators...', outputs);
-
   return outputs.map(function(type){
     return  self.loadGenerator(type, options);
   }).filter(function(generator){
