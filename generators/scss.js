@@ -15,21 +15,24 @@ function SCSSGenerator (options) {
 
 	this.log('options', options);
 
-	this.options = assign({}, {
+	options = assign({}, options, {
 		outputPath: 'app/styles', 
+        spritesPath: 'assets',
 		name: 'sprites',
 		ext: '.scss'
-	}, options)
+	})
+
 
 	if (!options.destDir) {
 		throw new Error('must have destDir argument in options');
 	}
 
-	this.relativePath = this.options.outputPath;
-	this.outputPath = path.join(options.destDir, this.options.outputPath);
-	this.outputFile = path.join(this.outputPath, this.options.name + this.options.ext);
-	this.ext = this.options.ext;
-	this.spriteName = this.options.name;
+	this.relativePath = options.outputPath;
+    this.spritesPath = options.spritesPath;
+	this.outputPath = path.join(options.destDir, options.outputPath);
+	this.outputFile = path.join(this.outputPath, options.name + options.ext);
+	this.ext = options.ext;
+	this.spriteName = options.name;
 }
 
 util.inherits(SCSSGenerator, Base);
@@ -61,7 +64,7 @@ SCSSGenerator.prototype.generateSCSSFile = function(config) {
     rule['offsetY'] = rule.y > 0 ? -rule.y : 0;
     rule['totalWidth'] = config.properties.width;
     rule['totalHeight'] = config.properties.height;
-    rule['imagePath'] = path.join('../', this.options.outputPath, this.spriteName + '.png');
+    rule['imagePath'] = path.join('../', this.spritesPath, this.spriteName + '.png');
 
     context += this.generateSCSS(rule);
   }
@@ -99,6 +102,7 @@ SCSSGenerator.prototype.generateSCSSFile = function(config) {
 
 SCSSGenerator.prototype.generate = function(data){
 	mkdirp.sync(this.outputPath);
+
     fs.writeFileSync(this.outputFile, this.generateSCSSFile(data));
 	this.log("\twrite to", this.outputFile);
 }
