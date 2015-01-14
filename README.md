@@ -29,7 +29,7 @@ Example `options` object:
     ext: 'png',
 
     // sprite engine arguments   
-    engine: 'auto',
+    engine: 'auto', // e.g. phantomjs, canvas, ...
     algorithm: 'binary-tree',
     padding: 5
 }
@@ -38,7 +38,7 @@ Example `options` object:
 
 `output` defaults is 'all', can be set `'scss'`, `'image'`, '`less`', but now only support `'scss'` , `'image'`
 
-`engine`, `algorithm`, `padding` is spritesmit [options](https://github.com/Ensighten/spritesmith#documentation)
+`engine`, `algorithm`, `padding` are spritesmith [options](https://github.com/Ensighten/spritesmith#documentation)
 
 License
 

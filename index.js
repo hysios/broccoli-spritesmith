@@ -23,7 +23,7 @@ function BroccoliSpritesmith (inputTree, options) {
     spriteName: 'sprites',
     ext: 'png',
 
-    // sprite engine arguments   
+    // sprite engine arguments
     engine: 'auto',
     algorithm: 'binary-tree',
     padding: 5
@@ -64,7 +64,8 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
   var runOptions = {
     src: spritesImages,
     padding: this.options.padding,
-    algorithm: this.options.algorithm    
+    algorithm: this.options.algorithm,
+    engine: this.options.engine
   };
 
   return new Promise(function(resolve, reject){
@@ -75,7 +76,7 @@ BroccoliSpritesmith.prototype.write = function (readTree, destDir) {
 
         var generators = self.loadGenerators({
           destDir: destDir,
-          outputPath: outputPath, 
+          outputPath: outputPath,
 
         });
 
@@ -136,7 +137,7 @@ function compile (template, context) {
   var pos = 0;
   while ((result = patt.exec(template)) != null)  {
     var found = result[1];
-    var lastIndex = patt.lastIndex || 0;    
+    var lastIndex = patt.lastIndex || 0;
     var startIndex = lastIndex - result[0].length
     // console.log(result[0], pos, startIndex, lastIndex);
 
